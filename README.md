@@ -67,7 +67,7 @@ The neural network consists of:
 
 The agent uses the standard Q-learning update rule:
 
-\[ Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \cdot \max_{a'} Q(s', a') - Q(s, a) \right] \]
+Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \cdot \max_{a'} Q(s', a') - Q(s, a) \right]
 
 Where:
 - **State (s)**: Vehicle counts per lane and current signal phase
