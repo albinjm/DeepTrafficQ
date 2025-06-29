@@ -67,12 +67,14 @@ The neural network consists of:
 
 The agent uses the standard Q-learning update rule:
 
-Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \cdot \max_{a'} Q(s', a') - Q(s, a) \right]
-
-Where:
-- **State (s)**: Vehicle counts per lane and current signal phase
-- **Action (a)**: Adjusting signal duration
-- **Reward (r)**: Negative of cumulative waiting time
+  Q(s,a) = Q(s,a) + α[r + γ·max(Q(s',a')) - Q(s,a)]
+  
+  Where:
+  - Q(s,a): Current Q-value for state-action pair
+  - s': Next state
+  - a': Next action
+  - α: Learning rate (0 < α ≤ 1)
+  - γ: Discount factor (0 ≤ γ < 1)
 
 ## License
 
